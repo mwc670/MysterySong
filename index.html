@@ -49,10 +49,10 @@
             const wrong = "Sorry, that wasn't it. You may have mispelled something or not included the full name.";
             const rightAnswer1 = "Stay Together for the Kids";
             const rightAnswer2 = "stay together for the kids";
-            const rightAnswer3 = "stay together for the kids blink 182";
+            const rightAnswer3 = "Stay together for the kids";
 
             var userInput = document.getElementById("songName").value;
-            if (userInput === rightAnswer1 || userInput === rightAnswer2){
+            if (userInput === rightAnswer1 || userInput === rightAnswer2 || userInput === rightAnswer3){
                 document.getElementById("response").innerHTML = correct;
             } else {
                 document.getElementById("response").innerHTML = wrong;
