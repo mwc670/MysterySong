@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta title="Mystery Song" />
+    <style>
+        h1{
+            font-family: 'Script MT', script;
+            font-weight: bold;
+            font-size: 3rem;
+            width: 100%;
+            margin-bottom: 0px;
+        }
+        body{
+            text-align: center;
+            font-family: Verdana, sans-serif;
+            font-size: 1rem;
+            text-align: center;
+            width: 100%;
+        }
+        html{
+            background-color: #040d39;
+            color: #d7efe6;
+        }
+        button{
+            border:1px;
+            border-radius: 5%;
+            font-size: 1.15rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Mystery Song of the Day</h1>
+    <br />
+    <audio controls>
+        <source src ="./Songs/MysterySong3.mp3" type="audio/mp3" />
+    </audio><br />
+    <br />
+   <label for="songName">Song Name: </label>
+   <input id="songName" type="text" /> <br /> <br />
+   <button onclick="checkAnswer()">Submit</button>
+       
+    <p id="response"></p>
+
+    <script type="text/javascript">
+        function checkAnswer() {
+            const correct = "Correct, it was Stay Together for the Kids!";
+            const wrong = "Sorry, that wasn't it. You may have mispelled something or not included the full name.";
+            const rightAnswer1 = "Stay Together for the Kids";
+            const rightAnswer2 = "stay together for the kids";
+            const rightAnswer3 = "stay together for the kids blink 182";
+
+            var userInput = document.getElementById("songName").value;
+            if (userInput === rightAnswer1 || userInput === rightAnswer2){
+                document.getElementById("response").innerHTML = correct;
+            } else {
+                document.getElementById("response").innerHTML = wrong;
+            }
+        }
+    </script>
+
+</body>
+</html>
